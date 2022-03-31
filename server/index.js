@@ -7,6 +7,10 @@ import postRoutes from "./routes/posts.js";
 import userRouter from "./routes/user.js";
 import "dotenv/config";
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 const app = express();
 
 app.use(express.json({ limit: "30mb", extended: true }));
