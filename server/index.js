@@ -5,7 +5,9 @@ import cors from "cors";
 
 import postRoutes from "./routes/posts.js";
 import userRouter from "./routes/user.js";
-import "dotenv/config";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
@@ -25,7 +27,7 @@ const CONNECTION_URL =
 const PORT = process.env.PORT || 5000;
 
 mongoose
-  .connect(CONNECTION_URL || MONGO_URL, {
+  .connect(CONNECTION_URL || process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
