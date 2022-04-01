@@ -10,7 +10,6 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "start": "node server/index.js",
     "client": "cd client && npm start"
-
   },
   "repository": {
     "type": "git",
@@ -22,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/nico-patano/test-heroku/issues"
   },
-  "homepage": "https://github.com/nico-patano/test-heroku#readme"
+  "homepage": "https://github.com/nico-patano/test-heroku#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
 }
